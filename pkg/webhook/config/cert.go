@@ -22,10 +22,9 @@ import (
 )
 
 var (
-	CertFile     string
-	KeyFile      string
-	Port         int
-	SidecarImage string
+	CertFile string
+	KeyFile  string
+	Port     int
 )
 
 // Config contains the server (the webhook) cert and key.

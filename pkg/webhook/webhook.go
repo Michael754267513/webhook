@@ -50,8 +50,6 @@ func init() {
 		"File containing the default x509 private key matching --tls-cert-file.")
 	CmdWebhook.Flags().IntVar(&config2.Port, "port", 443,
 		"Secure port that the webhook listens on")
-	CmdWebhook.Flags().StringVar(&config2.SidecarImage, "sidecar-image", "",
-		"Image to be used as the injected sidecar")
 }
 
 // admitv1beta1Func handles a v1beta1 admission
