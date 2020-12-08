@@ -30,7 +30,7 @@ import (
 // baseline pod基线
 func BaseLineValidating(ar v1.AdmissionReview) *v1.AdmissionResponse {
 
-	klog.V(2).Info("handpay pod baseline")
+	klog.V(2).Info("pod baseline")
 	podResource := metav1.GroupVersionResource{Group: "", Version: "v1", Resource: "pods"}
 	if ar.Request.Resource != podResource {
 		err := fmt.Errorf("expect resource to be %s", podResource)
@@ -51,7 +51,7 @@ func BaseLineValidating(ar v1.AdmissionReview) *v1.AdmissionResponse {
 	if !podenv.IsExistEnv("TZ", pod) {
 		reviewResponse.Allowed = false
 		reviewResponse.Result = &metav1.Status{
-			Message: "验证消息GG",
+			Message: "验证消息环境变量不存在",
 			Reason:  metav1.StatusReasonForbidden,
 			Code:    500,
 		}

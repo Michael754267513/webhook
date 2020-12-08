@@ -8,7 +8,7 @@ kubernetes validating admission webhook and mutating admission webhook.
 * demo证书已经生成，可以直接使用
 ## 配置说明
 * 利用mutating admission做修改容器环境变量，添加TZ和LANG 变量
-* 利用validating admission做验证对于环境变量不存在TZ和LANG的进行拒绝添加
+* 利用validating admission做验证对于环境变量不存在TZ的进行拒绝添加
 ## 启动参数
 `--tls-cert-file=./deploy/certs/webhook-server-tls.crt  --tls-private-key-file=./deploy/certs/webhook-server-tls.key`
 
