@@ -32,7 +32,7 @@ import (
 // baseline pod基线
 func BaseLine(ar v1.AdmissionReview) *v1.AdmissionResponse {
 
-	klog.V(2).Info("handpay pod baseline")
+	klog.V(2).Info("pod baseline")
 	podResource := metav1.GroupVersionResource{Group: "", Version: "v1", Resource: "pods"}
 	if ar.Request.Resource != podResource {
 		err := fmt.Errorf("expect resource to be %s", podResource)
