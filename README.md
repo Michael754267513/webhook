@@ -21,3 +21,7 @@ kubernetes validating admission webhook and mutating admission webhook.
 
 ## 参考地址
 * https://github.com/kubernetes/kubernetes/blob/e1c617a88ec286f5f6cb2589d6ac562d095e1068/test/images/agnhost/webhook/main.go#L234
+
+
+
+# export caBundle="$(openssl base64 -A <"certs/ca.crt")"
